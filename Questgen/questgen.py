@@ -25,12 +25,12 @@ from nltk.corpus import brown
 from similarity.normalized_levenshtein import NormalizedLevenshtein
 from nltk.tokenize import sent_tokenize
 from flashtext import KeywordProcessor
-from encoding import beam_search_decoding
-from mcq import tokenize_sentences
-from mcq import get_keywords
-from mcq import get_sentences_for_keyword
-from mcq import generate_questions_mcq
-from mcq import generate_normal_questions
+from Questgen.encoding import beam_search_decoding
+from Questgen.mcq import tokenize_sentences
+from Questgen.mcq import get_keywords
+from Questgen.mcq import get_sentences_for_keyword
+from Questgen.mcq import generate_questions_mcq
+from Questgen.mcq import generate_normal_questions
 import time
 class PythonPredictor:
     
