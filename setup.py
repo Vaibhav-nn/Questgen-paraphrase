@@ -1,12 +1,12 @@
 from distutils.core import setup
 
 setup(name='Questgen',
-      version='2.0.12',
+      version='2.0.13',
       description='Question generator from any text',
       author='Questgen contributors',
       author_email='vaibhavtiwarifu@gmail.com',
       license='gnu',
-      packages=['Questgen', 'Questgen.encoding', 'Questgen.mcq', 'Questgen.train'],
+      packages=['Questgen', 'Questgen.encoding', 'Questgen.mcq'],
       url="https://github.com/Vaibhav-nn/Questgen-paraphrase",
       install_requires=[
          
