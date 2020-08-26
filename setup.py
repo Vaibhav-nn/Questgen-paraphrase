@@ -6,7 +6,7 @@ setup(name='Questgen',
       author='Questgen contributors',
       author_email='vaibhavtiwarifu@gmail.com',
       license='gnu',
-      packages=['Questgen','Questgen.main', 'Questgen.encoding', 'Questgen.mcq', 'Questgen.train'],
+      packages=['Questgen', 'Questgen.encoding', 'Questgen.mcq', 'Questgen.train'],
       url="https://github.com/Vaibhav-nn/Questgen-paraphrase",
       install_requires=[
          
