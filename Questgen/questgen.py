@@ -32,7 +32,8 @@ from Questgen.mcq import get_sentences_for_keyword
 from Questgen.mcq import generate_questions_mcq
 from Questgen.mcq import generate_normal_questions
 import time
-class PythonPredictor:
+
+class QGen:
     
     def __init__(self):
         model_file_1 = "../input/s2v-old/s2v_old"
@@ -193,7 +194,7 @@ class PythonPredictor:
         return output
 
 
-class BooleanPredictor:
+class BoolQGen:
        
     def __init__(self):
         self.tokenizer = T5Tokenizer.from_pretrained('t5-base')
