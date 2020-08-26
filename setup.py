@@ -6,8 +6,28 @@ setup(name='Questgen',
       author='Questgen contributors',
       author_email='vaibhavtiwarifu@gmail.com',
       license='gnu',
-      packages=['Questgen'],
-      url="https://github.com/ramsrigouthamg/Questgen.ai",
-
-      package_data={'Questgen': ['questgen.py', 'mcq.py', 'train.py']}
+      packages=['Questgen', 'Questgen.encoding', 'Questgen.mcq', 'Questgen.train'],
+      url="https://github.com/Vaibhav-nn/Questgen-paraphrase",
+      install_requires=[
+         
+           'torch==1.5.1',
+           'transformers==3.0.2',
+           'pytorch_lightning==0.8.1',
+           'sense2vec==1.0.2',
+           'strsim==0.0.3',
+           'six==1.12.0',
+           'networkx==2.4.0',
+           'numpy',
+           'scipy',
+           'scikit-learn',
+           'unidecode==1.1.1',
+           'future==0.18.2',
+           'joblib==0.14.1',
+           'spacy==2.2.4',
+           'pytz==2020.1',
+           'python-dateutil==2.8.1',
+           'boto3==1.14.40',
+           'flashtext==2.7'
+      ],
+      package_data={'Questgen': ['questgen.py', 'mcq.py', 'train_gpu.py', 'encoding.py']}
       )
