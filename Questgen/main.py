@@ -264,7 +264,7 @@ class AnswerPredictor:
         if torch.cuda.is_available():
             torch.cuda.manual_seed_all(seed)
 
-    def greedy_decoding (inp_ids,attn_mask):
+    def greedy_decoding (inp_ids,attn_mask,model,tokenizer):
         greedy_output = model.generate(input_ids=inp_ids, attention_mask=attn_mask, max_length=256)
         Question =  tokenizer.decode(greedy_output[0], skip_special_tokens=True,clean_up_tokenization_spaces=True)
         return Question.strip().capitalize()
@@ -280,8 +280,8 @@ class AnswerPredictor:
         question = inp["input_question"]
         input = "question: %s <s> context: %s </s>" % (question,context)
 
-        encoding = tokenizer.encode_plus(input, return_tensors="pt")
+        encoding = self.tokenizer.encode_plus(input, return_tensors="pt")
         input_ids, attention_masks = encoding["input_ids"].to(device), encoding["attention_mask"].to(device)
-        output = greedy_decoding(input_ids,attention_masks)
+        output = greedy_decoding(input_ids,attention_masks,self.model,self.tokenizer)
 
         return output
