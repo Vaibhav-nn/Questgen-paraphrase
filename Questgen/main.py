@@ -36,7 +36,7 @@ import time
 class QGen:
     
     def __init__(self):
-        model_file_1 = "../input/s2v-old/s2v_old"
+        
         
         self.tokenizer = T5Tokenizer.from_pretrained('t5-base')
         model = T5ForConditionalGeneration.from_pretrained('Parth/result')
@@ -47,7 +47,7 @@ class QGen:
         self.model = model
         self.nlp = spacy.load('en_core_web_sm')
 
-        self.s2v = Sense2Vec().from_disk('../input/s2v-old/s2v_old')
+        self.s2v = Sense2Vec()
 
         self.fdist = FreqDist(brown.words())
         self.normalized_levenshtein = NormalizedLevenshtein()
