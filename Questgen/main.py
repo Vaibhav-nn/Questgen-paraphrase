@@ -236,7 +236,7 @@ class BoolQGen:
         encoding = self.tokenizer.encode_plus(form, return_tensors="pt")
         input_ids, attention_masks = encoding["input_ids"].to(self.device), encoding["attention_mask"].to(self.device)
 
-        output = beam_search_decoding (input_ids, attention_masks,self.model,self.tokenizer)
+        output = topkp_decoding (input_ids, attention_masks,self.model,self.tokenizer)
         if torch.device=='cuda':
             torch.cuda.empty_cache()
         
