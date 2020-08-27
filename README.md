@@ -20,6 +20,53 @@ python -m spacy download en
 ```
 ### Using the library
 
+**pip install git+https://github.com/ramsrigouthamg/Questgen.ai**
+
+*For MCQ, Short Question and Paraphrasing Question generation*
+```
+import Questgen
+generator= main.QGen()                          #instance of QGen class
+
+payload={
+    "input_text" :   'Text',
+    "max_questions" : 5                         #Default 4
+    }
+    
+output1= generator.predict_mcq(payload)         #For MCQ generation       
+output2= generator.predict_shortq(payload)      #For Short Answers' Question generaiton
+output3= generator.paraphrase(payload)          #For paraphrasing questions
+```
+
+
+*For Boolean question generation*
+```
+import Questgen
+generator= main.BoolQGen()                      #instance of BoolQGen class
+
+payload={
+    "input_text" :   'Text',
+    "max_questions" : 5                         #Default 4
+    }
+
+output= generator.predict_boolq(payload)
+```
+
+
+*For Answer prediction from a given question*
+```
+import Questgen
+generator= main.AnswerPredictor()
+
+payload={
+    "input_text" :   'Text',
+    "input_question" : 'Question'                         
+    }
+
+output= generator.predict_answer(payload)
+```
+
 ### NLP models used
+
+For maintaining meaningfulness in Questions, Questgen uses Three T5 models, one for Boolean Question generation, one for MCQ and short Questions and one for Answer generation.
 
 ### Online Demo website
