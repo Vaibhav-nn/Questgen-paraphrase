@@ -67,6 +67,6 @@ output= generator.predict_answer(payload)
 
 ### NLP models used
 
-For maintaining meaningfulness in Questions, Questgen uses Three T5 models, one for Boolean Question generation, one for MCQ and short Questions and one for Answer generation.
+For maintaining meaningfulness in Questions, Questgen uses Three T5 models, one for Boolean Question generation, one for MCQ, Short Questions, Paraphrasing and one for Answer generation.
 
 ### Online Demo website
