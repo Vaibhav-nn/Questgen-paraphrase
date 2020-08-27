@@ -6,7 +6,7 @@ setup(name='Questgen',
       author='Questgen contributors',
       author_email='vaibhavtiwarifu@gmail.com',
       packages=['Questgen', 'Questgen.encoding', 'Questgen.mcq'],
-      url="https://github.com/ramsrigouthamg/Questgen.ai",
+      url="https://github.com/Vaibhav-nn/Questgen-paraphrase",
       install_requires=[
          
            'torch==1.5.1',
