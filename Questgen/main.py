@@ -170,10 +170,10 @@ class QGen:
             early_stopping=True
             )
 
-        print ("\nOriginal Question ::")
-        print (text)
-        print ("\n")
-        print ("Paraphrased Questions :: ")
+#         print ("\nOriginal Question ::")
+#         print (text)
+#         print ("\n")
+#         print ("Paraphrased Questions :: ")
         final_outputs =[]
         for beam_output in beam_outputs:
             sent = self.tokenizer.decode(beam_output, skip_special_tokens=True,clean_up_tokenization_spaces=True)
