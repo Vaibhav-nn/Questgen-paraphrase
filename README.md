@@ -8,7 +8,8 @@ Questgen AI is focused on developing Question generation algorithms using state-
   -- Normal Questions :     (What,Where,Who,how,When etc) <br>
   -- MCQ Questions :        Generate Questions with answers and similar options <br>
   -- Boolean Questions :    (Is,Did,Does etc) Output is expected either True/False <br>
-  -- Paraphrase Questions : Generate similar but different questions from a given question 
+  -- Paraphrase Questions : Generate similar but different questions from a given question <br>
+  -- Answering :            Any question can be answered provided with a context.
 </pre>
 
 ### Prerequisites
