@@ -10,7 +10,7 @@ setup(name='Questgen',
       install_requires=[
          
            'torch==1.5.1',
-           'transformers==3.0.2',
+           'transformers==4.30.0',
            'pytorch_lightning==0.8.1',
            'sense2vec==1.0.2',
            'strsim==0.0.3',
